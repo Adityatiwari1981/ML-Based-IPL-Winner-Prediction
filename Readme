@@ -1,0 +1,64 @@
+# IPL Match Winner Prediction Using Machine Learning (2026 Prediction Included)
+
+This project is an **AI + Machine Learning based system** that predicts the outcome of IPL matches using historical match data, feature engineering, and ML classification models such as **Random Forest** and **XGBoost**.
+
+The project also calculates the **Team Win Percentage using a corrected formula** and predicts the **most probable winner of IPL 2026** based on historical performance.
+
+---
+
+## Project Objectives
+
+- Clean and preprocess IPL ball-by-ball + match dataset  
+- Perform detailed **EDA** (team performance, toss impact, venue influence, season trends)  
+- Encode categorical data and generate new meaningful features  
+- Train ML models to predict match winners  
+- Calculate **team-wise winning percentages**  
+- Predict **IPL 2026 probable winner** based on historical performance  
+
+---
+
+##  Dataset Information
+
+The dataset is a structured IPL match + ball-by-ball dataset with columns like:
+
+- `batting_team`, `bowling_team`, `runs_total`, `team_runs`, `team_wicket`
+- `overs`, `balls_per_over`, `venue`, `toss_winner`
+- `match_won_by`, `season`, `city`, `event_name`, etc.
+
+After cleaning, unnecessary high-cardinality columns such as umpire names, player names, event names, etc. were removed.
+
+---
+
+##  Data Cleaning Steps
+
+- Removed IDs and irrelevant columns  
+- Dropped rows with missing `match_won_by` values  
+- Forward-filled missing values  
+- Cleaned unexpected team names and encoded consistent team IDs  
+
+---
+
+## Feature Engineering
+
+Following new meaningful features were created:
+
+- `overs_faced` → team_balls / balls_per_over  
+- `current_run_rate` → team_runs / overs_faced  
+- `wickets_in_hand` → 10 – team_wicket  
+- `is_chasing` → 1 if innings == 2 else 0  
+
+These features helped improve model learning.
+
+---
+
+## Exploratory Data Analysis (EDA)
+
+Charts included:
+
+- Most wins by each team  
+- Toss decision impact on match results  
+- Top venues with most matches  
+- Season-wise match count trend  
+- **Correct Team Winning Percentage** plot  
+
+_Add screenshots here:_
