@@ -6,7 +6,7 @@
 </head>
 <body>
 
-  <h1>🏏 IPL Match Winner Prediction Using Machine Learning (IPL 2026)</h1>
+  <h1>IPL Match Winner Prediction Using Machine Learning (IPL 2026)</h1>
 
   <p>
     This project is an <strong>AI and Machine Learning based system</strong> designed to
@@ -23,7 +23,7 @@
 
   <hr>
 
-  <h2>📌 Project Objectives</h2>
+  <h2>Project Objectives</h2>
   <ul>
     <li>Clean and preprocess IPL match dataset</li>
     <li>Perform Exploratory Data Analysis (EDA)</li>
@@ -35,7 +35,7 @@
 
   <hr>
 
-  <h2>📂 Dataset Description</h2>
+  <h2>Dataset Description</h2>
   <p>
     The dataset contains IPL match and ball-by-ball level data with columns such as:
   </p>
@@ -54,7 +54,7 @@
 
   <hr>
 
-  <h2>🧹 Data Cleaning</h2>
+  <h2>Data Cleaning</h2>
   <ul>
     <li>Removed irrelevant columns (IDs, umpires, player names)</li>
     <li>Dropped rows with missing match winners</li>
@@ -64,7 +64,7 @@
 
   <hr>
 
-  <h2>🧠 Feature Engineering</h2>
+  <h2>Feature Engineering</h2>
   <p>The following new features were created:</p>
   <ul>
     <li><strong>overs_faced</strong> = team_balls / balls_per_over</li>
@@ -75,7 +75,7 @@
 
   <hr>
 
-  <h2>📊 Exploratory Data Analysis (EDA)</h2>
+  <h2>Exploratory Data Analysis (EDA)</h2>
   <ul>
     <li>Most wins by team</li>
     <li>Impact of toss decision on results</li>
@@ -91,7 +91,7 @@
 
   <hr>
 
-  <h2>🤖 Machine Learning Models Used</h2>
+  <h2>Machine Learning Models Used</h2>
 
   <h3>1. Random Forest Classifier</h3>
   <ul>
@@ -109,7 +109,7 @@
 
   <hr>
 
-  <h2>📈 Team Win Percentage Calculation</h2>
+  <h2>Team Win Percentage Calculation</h2>
   <p>
     Team win percentage is calculated using the corrected formula:
   </p>
@@ -124,7 +124,7 @@ Win Percentage = (Total Wins) / (Matches Played as Batting + Bowling) × 100
 
   <hr>
 
-  <h2>🏆 IPL 2026 Winner Prediction</h2>
+  <h2>IPL 2026 Winner Prediction</h2>
   <p>
     The IPL 2026 winner is predicted based on:
   </p>
@@ -141,7 +141,7 @@ Win Percentage = (Total Wins) / (Matches Played as Batting + Bowling) × 100
 
   <hr>
 
-  <h2>📁 Project Structure</h2>
+  <h2>Project Structure</h2>
   <pre>
 IPL-Match-Prediction-ML/
 │── IPL.csv
@@ -153,7 +153,7 @@ IPL-Match-Prediction-ML/
 
   <hr>
 
-  <h2>▶️ How to Run the Project</h2>
+  <h2>How to Run the Project</h2>
   <ol>
     <li>Upload <strong>IPL.csv</strong> to Google Colab or project directory</li>
     <li>Install required libraries (xgboost, sklearn, pandas, matplotlib)</li>
@@ -163,7 +163,7 @@ IPL-Match-Prediction-ML/
 
   <hr>
 
-  <h2>🚀 Future Enhancements</h2>
+  <h2>Future Enhancements</h2>
   <ul>
     <li>Live match prediction using real-time data</li>
     <li>Player-level performance analysis</li>
@@ -173,7 +173,7 @@ IPL-Match-Prediction-ML/
 
   <hr>
 
-  <h2>👨‍💻 Author</h2>
+  <h2>Author</h2>
   <p>
     <strong>Aditya Tiwari</strong><br>
     MCA Student | Machine Learning Enthusiast<br>
@@ -182,7 +182,7 @@ IPL-Match-Prediction-ML/
 
   <hr>
 
-  <p><strong>⭐ If you like this project, please give it a star on GitHub!</strong></p>
+  <p><strong>If you like this project, please give it a star on GitHub!</strong></p>
 
 </body>
 </html>
