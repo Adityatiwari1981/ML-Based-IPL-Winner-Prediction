@@ -1,64 +1,188 @@
-# IPL Match Winner Prediction Using Machine Learning (2026 Prediction Included)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPL Match Winner Prediction Using Machine Learning</title>
+</head>
+<body>
 
-This project is an **AI + Machine Learning based system** that predicts the outcome of IPL matches using historical match data, feature engineering, and ML classification models such as **Random Forest** and **XGBoost**.
+  <h1>🏏 IPL Match Winner Prediction Using Machine Learning (IPL 2026)</h1>
 
-The project also calculates the **Team Win Percentage using a corrected formula** and predicts the **most probable winner of IPL 2026** based on historical performance.
+  <p>
+    This project is an <strong>AI and Machine Learning based system</strong> designed to
+    predict IPL match outcomes using historical match data, feature engineering,
+    and machine learning models such as <strong>Random Forest</strong> and
+    <strong>XGBoost</strong>.
+  </p>
 
----
+  <p>
+    The system also calculates the <strong>correct team win percentage</strong> and
+    predicts the <strong>most probable winner of IPL 2026</strong> based on past
+    performance.
+  </p>
 
-## Project Objectives
+  <hr>
 
-- Clean and preprocess IPL ball-by-ball + match dataset  
-- Perform detailed **EDA** (team performance, toss impact, venue influence, season trends)  
-- Encode categorical data and generate new meaningful features  
-- Train ML models to predict match winners  
-- Calculate **team-wise winning percentages**  
-- Predict **IPL 2026 probable winner** based on historical performance  
+  <h2>📌 Project Objectives</h2>
+  <ul>
+    <li>Clean and preprocess IPL match dataset</li>
+    <li>Perform Exploratory Data Analysis (EDA)</li>
+    <li>Apply feature engineering for better prediction</li>
+    <li>Train and evaluate machine learning models</li>
+    <li>Calculate corrected team win percentage</li>
+    <li>Predict IPL 2026 winner team</li>
+  </ul>
 
----
+  <hr>
 
-##  Dataset Information
+  <h2>📂 Dataset Description</h2>
+  <p>
+    The dataset contains IPL match and ball-by-ball level data with columns such as:
+  </p>
+  <ul>
+    <li>batting_team, bowling_team</li>
+    <li>team_runs, team_wicket, overs</li>
+    <li>venue, toss_winner, toss_decision</li>
+    <li>season, innings</li>
+    <li>match_won_by (target column)</li>
+  </ul>
 
-The dataset is a structured IPL match + ball-by-ball dataset with columns like:
+  <p>
+    High-cardinality and unnecessary columns such as umpire names, player names,
+    IDs, and event metadata were removed during cleaning.
+  </p>
 
-- `batting_team`, `bowling_team`, `runs_total`, `team_runs`, `team_wicket`
-- `overs`, `balls_per_over`, `venue`, `toss_winner`
-- `match_won_by`, `season`, `city`, `event_name`, etc.
+  <hr>
 
-After cleaning, unnecessary high-cardinality columns such as umpire names, player names, event names, etc. were removed.
+  <h2>🧹 Data Cleaning</h2>
+  <ul>
+    <li>Removed irrelevant columns (IDs, umpires, player names)</li>
+    <li>Dropped rows with missing match winners</li>
+    <li>Handled missing values using forward fill</li>
+    <li>Ensured consistent team encoding</li>
+  </ul>
 
----
+  <hr>
 
-##  Data Cleaning Steps
+  <h2>🧠 Feature Engineering</h2>
+  <p>The following new features were created:</p>
+  <ul>
+    <li><strong>overs_faced</strong> = team_balls / balls_per_over</li>
+    <li><strong>current_run_rate</strong> = team_runs / overs_faced</li>
+    <li><strong>wickets_in_hand</strong> = 10 − team_wicket</li>
+    <li><strong>is_chasing</strong> = 1 if innings = 2, else 0</li>
+  </ul>
 
-- Removed IDs and irrelevant columns  
-- Dropped rows with missing `match_won_by` values  
-- Forward-filled missing values  
-- Cleaned unexpected team names and encoded consistent team IDs  
+  <hr>
 
----
+  <h2>📊 Exploratory Data Analysis (EDA)</h2>
+  <ul>
+    <li>Most wins by team</li>
+    <li>Impact of toss decision on results</li>
+    <li>Venue-wise match distribution</li>
+    <li>Season-wise match trend</li>
+    <li>Corrected team win percentage analysis</li>
+  </ul>
 
-## Feature Engineering
+  <p>
+    Graphs and visualizations were created using
+    <strong>Matplotlib</strong> and <strong>Seaborn</strong>.
+  </p>
 
-Following new meaningful features were created:
+  <hr>
 
-- `overs_faced` → team_balls / balls_per_over  
-- `current_run_rate` → team_runs / overs_faced  
-- `wickets_in_hand` → 10 – team_wicket  
-- `is_chasing` → 1 if innings == 2 else 0  
+  <h2>🤖 Machine Learning Models Used</h2>
 
-These features helped improve model learning.
+  <h3>1. Random Forest Classifier</h3>
+  <ul>
+    <li>Used as the primary baseline model</li>
+    <li>Handles multi-class classification efficiently</li>
+    <li>Provides feature importance</li>
+  </ul>
 
----
+  <h3>2. XGBoost Classifier</h3>
+  <ul>
+    <li>Gradient boosting based model</li>
+    <li>High performance on structured data</li>
+    <li>Supports multi-class prediction</li>
+  </ul>
 
-## Exploratory Data Analysis (EDA)
+  <hr>
 
-Charts included:
+  <h2>📈 Team Win Percentage Calculation</h2>
+  <p>
+    Team win percentage is calculated using the corrected formula:
+  </p>
+  <pre>
+Win Percentage = (Total Wins) / (Matches Played as Batting + Bowling) × 100
+  </pre>
 
-- Most wins by each team  
-- Toss decision impact on match results  
-- Top venues with most matches  
-- Season-wise match count trend  
-- **Correct Team Winning Percentage** plot  
+  <p>
+    This avoids incorrect inflation of win percentages and ensures
+    fair team comparison.
+  </p>
 
-_Add screenshots here:_
+  <hr>
+
+  <h2>🏆 IPL 2026 Winner Prediction</h2>
+  <p>
+    The IPL 2026 winner is predicted based on:
+  </p>
+  <ul>
+    <li>Historical team win percentage</li>
+    <li>Overall team performance consistency</li>
+    <li>Machine learning insights</li>
+  </ul>
+
+  <p>
+    The team with the highest win percentage is selected as the
+    <strong>most probable IPL 2026 winner</strong>.
+  </p>
+
+  <hr>
+
+  <h2>📁 Project Structure</h2>
+  <pre>
+IPL-Match-Prediction-ML/
+│── IPL.csv
+│── IPL_Cleaned.csv
+│── IPL_Match_Prediction.ipynb
+│── README.md
+│── images/
+  </pre>
+
+  <hr>
+
+  <h2>▶️ How to Run the Project</h2>
+  <ol>
+    <li>Upload <strong>IPL.csv</strong> to Google Colab or project directory</li>
+    <li>Install required libraries (xgboost, sklearn, pandas, matplotlib)</li>
+    <li>Run the notebook from top to bottom</li>
+    <li>Check outputs and graphs</li>
+  </ol>
+
+  <hr>
+
+  <h2>🚀 Future Enhancements</h2>
+  <ul>
+    <li>Live match prediction using real-time data</li>
+    <li>Player-level performance analysis</li>
+    <li>Deep learning based sequence models</li>
+    <li>Web dashboard for visualization</li>
+  </ul>
+
+  <hr>
+
+  <h2>👨‍💻 Author</h2>
+  <p>
+    <strong>Aditya Tiwari</strong><br>
+    MCA Student | Machine Learning Enthusiast<br>
+    GitHub: <a href="https://github.com/yourusername">https://github.com/yourusername</a>
+  </p>
+
+  <hr>
+
+  <p><strong>⭐ If you like this project, please give it a star on GitHub!</strong></p>
+
+</body>
+</html>
