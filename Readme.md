@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>IPL Match Winner Prediction Using Machine Learning</title>
-</head>
-<body>
-
+  <h1>IPL Match Winner Prediction Using Machine Learning</h1>
   <h1>IPL Match Winner Prediction Using Machine Learning (IPL 2026)</h1>
 
   <p>
@@ -181,8 +174,3 @@ IPL-Match-Prediction-ML/
   </p>
 
   <hr>
-
-  <p><strong>If you like this project, please give it a star on GitHub!</strong></p>
-
-</body>
-</html>
